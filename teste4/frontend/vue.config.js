@@ -1,4 +1,8 @@
 module.exports = {
+  configureWebpack: {
+    devtool: 'source-map'
+  },
+  lintOnSave: false,
   devServer: {
     proxy: {
       '/api': {

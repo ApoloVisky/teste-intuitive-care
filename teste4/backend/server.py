@@ -99,7 +99,7 @@ def buscar():
         
         resultados = buscar_operadoras(termo)
         
-        # Log para debug (apenas em desenvolvimento)
+        
         if app.debug:
             print(f"Busca por '{termo}': {len(resultados)} resultados")
         
