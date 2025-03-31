@@ -3,9 +3,9 @@
 Este repositório contém a solução para os testes de nivelamento propostos no documento.
 
 
-Para rodar o projeto dê o comando git clone https://github.com/ApoloVisky/teste-intuitive-care
+Para iniciar o projeto dê o comando git clone https://github.com/ApoloVisky/teste-intuitive-care
 
-Para começar digite o comando pip install -r requirements.txt para instalar todas as dependências
+Para iniciar a execução do teste digite o comando pip install -r requirements.txt para instalar todas as dependências
 
 ## 1. Teste de Web Scraping
 
