@@ -98,7 +98,13 @@ Este teste envolve o desenvolvimento e consumo de uma API, incluindo a configura
 
 **Passos:**
 
-1. **Inicie o backend:**
+1. **Navegue até o diretório do teste:**
+
+   ```bash
+    cd teste4
+    ```
+
+2. **Inicie o backend:**
 
     - Navegue até o diretório do backend:
 
@@ -112,7 +118,7 @@ Este teste envolve o desenvolvimento e consumo de uma API, incluindo a configura
         python server.py
         ```
 
-2. **Inicie o frontend:**
+3. **Inicie o frontend:**
 
     - Abra um novo terminal e navegue até o diretório do frontend:
 
@@ -132,7 +138,7 @@ Este teste envolve o desenvolvimento e consumo de uma API, incluindo a configura
         npm run serve
         ```
 
-    - O frontend estará disponível em `http://localhost:8080/`.
+    - A aplicação estará disponível em `http://localhost:8080/`.
 
 ## Coleção do Postman
 
