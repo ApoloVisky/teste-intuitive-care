@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: API para o sistema de operadoras da ANS
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 1024
+    Environment:
+      Variables:
+        DATA_BUCKET: !Ref DataBucketName
+        CSV_KEY: 'operadoras_ativas.csv'
+
+Resources:
+  OperadorasAPI:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./
+      Handler: api_lambda.lambda_handler
+      Runtime: python3.9
+      Policies:
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: Allow
+              Action:
+                - s3:GetObject
+              Resource: !Sub 'arn:aws:s3:::${DataBucketName}/*'
+      Events:
+        ApiEndpoint:
+          Type: Api
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref DataBucketName
+      AccessControl: Private
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteOldFiles
+            Status: Enabled
+            ExpirationInDays: 30
+
+Parameters:
+  DataBucketName:
+    Type: String
+    Default: 'testeintuitivebucket300320252058'  # Substitua por um nome único
+
+Outputs:
+  ApiUrl:
+    Description: "URL da API"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+  DataBucketName:
+    Description: "Nome do bucket S3 para dados"
+    Value: !Ref DataBucketName

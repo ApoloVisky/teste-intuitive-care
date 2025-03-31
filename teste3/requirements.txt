@@ -6,3 +6,5 @@ tqdm==4.62.3
 zipfile
 pdfplumber
 BeautifulSoup
+pandas==1.3.5
+boto3==1.20.32
