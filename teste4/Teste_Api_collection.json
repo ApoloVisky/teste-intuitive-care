@@ -1,0 +1,36 @@
+{
+	"info": {
+		"_postman_id": "dd119c0b-af47-4a84-8b1a-f7e139e2c1a5",
+		"name": "MinhaAPITeste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37263775"
+	},
+	"item": [
+		{
+			"name": "metodo get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/buscar?termo=saude",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "saude"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
