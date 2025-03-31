@@ -39,6 +39,8 @@ Após isso digite npm intall para instalar as dependências
 Para iniciar o servidor: npm run serve.
 O mesmo estará disponível na porta http://192.168.15.6:8080/ para efetuar as buscas
 
+Também é possível exportar em um arquivo Csv o resultado das buscas
+
 ## Postman Collection
 
 Para testar a API no Postman, importe a coleção localizada em:
