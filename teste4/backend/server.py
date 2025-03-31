@@ -4,15 +4,12 @@ import csv
 import os
 from urllib.parse import unquote
 
+
+
+
 app = Flask(__name__)
-# Configuração mais segura do CORS para produção
-CORS(app, resources={
-    r"/api/*": {
-        "origins": ["http://localhost:8080", "http://seu-dominio.com"],
-        "methods": ["GET"],
-        "allow_headers": ["Content-Type"]
-    }
-})
+CORS(app)
+
 
 def ler_csv(caminho):
     """Função melhorada para leitura de CSV com tratamento de erros robusto"""
@@ -27,13 +24,13 @@ def ler_csv(caminho):
             
             for linha in leitor_csv:
                 if linha:
-                    # Normalização mais robusta dos dados
+                    
                     linha_limpa = {
                         k.strip(): v.strip() if v and isinstance(v, str) else v
                         for k, v in linha.items()
                         if k and k.strip()
                     }
-                    if linha_limpa:  # Só adiciona se não estiver vazio
+                    if linha_limpa:  
                         dados.append(linha_limpa)
                         
     except Exception as e:
