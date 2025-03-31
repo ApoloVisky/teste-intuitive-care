@@ -158,5 +158,4 @@ Caso tenha dúvidas, entre em contato:
 📧 **E-mail:** adeilton.s.polovodoff@gmail.com
 🐙 **GitHub:** [ApoloVisky](https://github.com/ApoloVisky)  
 
-🔹 _Este README foi criado para facilitar a execução e compreensão dos testes! 😃
 
