@@ -9,7 +9,7 @@ from urllib.parse import unquote
 
 app = Flask(__name__)
 CORS(app)
-
+    
 
 def ler_csv(caminho):
     """Função melhorada para leitura de CSV com tratamento de erros robusto"""
