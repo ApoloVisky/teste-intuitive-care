@@ -39,3 +39,16 @@ Após isso digite npm intall para instalar as dependências
 Para iniciar o servidor: npm run serve.
 O mesmo estará disponível na porta http://192.168.15.6:8080/ para efetuar as buscas
 
+## Postman Collection
+
+Para testar a API no Postman, importe a coleção localizada em:
+
+📂 `Teste_Api_collection.json`
+
+### Como importar:
+1. Abra o Postman.
+2. Vá em **File > Import**.
+3. Selecione o arquivo `Teste_Api_collection.json`.
+4. Teste as requisições!
+
+
