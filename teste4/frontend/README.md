@@ -1,4 +1,4 @@
-# front-end-teste4
+# frontend
 
 ## Project setup
 ```
